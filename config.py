@@ -5,6 +5,8 @@ LISTEN = {
     'address': ""
 }
 
+DAYS_RANGE = ['1', '2', '3', '4']
+
 REDIS = {
     'host': '192.168.122.16',
     'port': 6379

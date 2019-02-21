@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>..enigma..</title>
-</head>
-<body>
-    <form action="/" method="POST">
+{% extends 'base.html' %}
+
+{% block body %}
+<form action="/" method="POST">
     Message:
     <br>
     <textarea name="msg" cols=72 rows=10></textarea>
     <br>
-    Due: <select name="due">
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>3</option>
-        <option value='4'>4</option>
+    Due:
+    <select name="due">
+        {% for day in days %}
+        <option value='{{ day }}'>{{ day }}</option>
+        {% end %}
     </select>
      days from now
     <button type="submit">Send</button>
-    </form>
-</body>
-</html>
+</form>
+{% end %}

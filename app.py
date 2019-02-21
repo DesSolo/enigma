@@ -13,12 +13,12 @@ class BaseHandler(tornado.web.RequestHandler):
 
 class IndexHandler(BaseHandler):
     def get(self):
-        self.render("templates/index.html")
+        self.render("templates/index.html", days=settings.DAYS_RANGE)
 
     def post(self, *args, **kwargs):
         msg = self.get_argument('msg')
         due = self.get_argument('due')
-        if not msg or (due not in ['1', '2', '3', '4']):
+        if not msg or (due not in settings.DAYS_RANGE):
             return self.send_error(405)
         token = token_hex(settings.TOKEN_BYTES)
         cache.set(token, msg, due)
