@@ -7,7 +7,7 @@ A simple solution for sending one-time messages. The message can be read only on
 
 ### Installation in system
 
-1. install python3.6
+1. install python3.7
 2. install redis and run
 3. clone this repo
 
