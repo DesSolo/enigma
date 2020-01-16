@@ -1,14 +1,16 @@
 PROTOCOL = 'http'
 
 LISTEN = {
-    'port': 8888,
-    'address': ""
+    'host': '0.0.0.0',
+    'port': 8000
 }
+
+LOG_FORMAT = '%a %t "%r" %s %b "%{Referer}i" "%{User-Agent}i"'
 
 DAYS_RANGE = ['1', '2', '3', '4']
 
 REDIS = {
-    'host': '192.168.122.16',
+    'host': '127.0.0.1',
     'port': 6379
 }
 

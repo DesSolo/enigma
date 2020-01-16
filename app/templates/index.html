@@ -10,9 +10,9 @@
     <select name="due">
         {% for day in days %}
         <option value='{{ day }}'>{{ day }}</option>
-        {% end %}
+        {% endfor %}
     </select>
      days from now
     <button type="submit">Send</button>
 </form>
-{% end %}
+{% endblock %}

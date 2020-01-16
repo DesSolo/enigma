@@ -1,7 +1,7 @@
 import datetime
 from base64 import b64encode, b64decode
 from redis import StrictRedis
-from caches.core import AbstractCache
+from caches.base import AbstractCache
 from core.settings import REDIS
 
 
@@ -17,5 +17,5 @@ class CacheRedis(AbstractCache):
         self.redis.delete(key)
         if not message:
             return None
-        return b64decode(message)
+        return b64decode(message).decode('utf-8')
 
