@@ -1,9 +1,12 @@
 version: "3"
 services:
   enigma:
+    image: "dessolo/enigma"
     build: .
     ports:
       - "8000:8000"
+    environment:
+      - REDIS_HOST=redis
     depends_on:
       - redis
   redis:
