@@ -6,7 +6,7 @@ import config
 def user_agent_validator():
     config.DENY_USER_AGENTS = [
         r'curl',
-        r'wget'
+        r'^Wget/1.20.3$'
     ]
     from core.validators import user_agent
     return user_agent
@@ -19,8 +19,9 @@ def user_agent_validator():
         ('curl/7.0.0', False),
         ('curl/', False),
         ('curl', False),
-        ('wget/1', False),
-        ('wget', False),
+        ('Wget/1', True),
+        ('Wget', True),
+        ('Wget/1.20.3', False),
         ('Curl', True),
         ('CURL', True),
         ('Mozilla/5.0 (Windows NT 10.0; Win64; x64)', True),

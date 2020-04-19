@@ -15,6 +15,7 @@ def client():
     [
         ('/', 200),
         ('/' * 20, 404),
+        ('/get', 404),
         ('/NotRegistered', 404),
     ]
 )
@@ -80,6 +81,7 @@ def test_expire_message(client, response_message):
         ('test', 0, 405),
         ('test', 5, 405),
         ('', 1, 405),
+        ('', '', 405),
     ] + [('test', i, 200) for i in config.DAYS_RANGE]
 )
 def test_post_params(client, msg, due, status_code):
