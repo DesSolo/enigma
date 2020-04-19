@@ -15,5 +15,5 @@ Docker-compose file [example](https://github.com/DesSolo/enigma/blob/master/dock
 | PROTOCOL    | http      | Used protocol ( http or https )  |
 | PORT        | 8000      | Listen port                      |
 | REDIS_HOST  | 127.0.0.1 | Redis server address or hostname |
-| REDIS_PORT  | 6379      | redis server port                |
-| TOKEN_BYTES | 20        | Lenght of url token              |
+| REDIS_PORT  | 6379      | Redis server port                |
+| TOKEN_BYTES | 20        | Length of url token              |
