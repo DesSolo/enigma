@@ -1,4 +1,9 @@
 ## Enigma
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/dessolo/enigma)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/dessolo/enigma)
+![Docker Pulls](https://img.shields.io/docker/pulls/dessolo/enigma)
+![Docker Image Version (latest by date)](https://img.shields.io/docker/v/dessolo/enigma)
+![GitHub](https://img.shields.io/github/license/dessolo/enigma)
 
 A simple solution for sending one-time messages. The message can be read only once.
 ```
